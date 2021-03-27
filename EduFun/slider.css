@@ -1,0 +1,663 @@
+*{
+  box-sizing: border-box;
+}
+  
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  
+[class*="col-"] {
+  float: left;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.html{
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  }
+
+.body{
+  font-family: Garamond, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 10pt;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  min-height: 100%;
+}
+body.slider__body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.slider__container {
+  position: fixed;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  -o-transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+}
+
+.slider__page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.slider__indicators {
+  position: fixed;
+  left: 18px;
+  top: 50%;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.slider__indicator {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 10px 0;
+  border-radius: 100px;
+  background-color: #b3ddd1;
+  cursor: default;
+}
+.slider__indicator--active {
+  opacity: 0.3;
+}
+
+
+.header{
+  padding: 0px;
+  margin: 0;
+  color: #3f2f2f;
+  background: linear-gradient(225deg, #b3ddd1, #fff);
+}
+.naziv{
+  padding-top: 15px;
+  padding-right: 0px;
+}
+.menu ul{
+
+  list-style-type: none;
+  margin: 0px;
+  font-style: bold;
+  padding-top: 15px;
+  position: absolute;
+  right: 10%;
+}
+.menu li{
+  margin: 5px;
+  display: block;
+  height: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  font-size: 15pt;
+  float: left;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.12), 0 5px 10px rgba(0,0,0,0.24);
+}
+
+.menu li:hover{
+  display: block;
+  background-color: #5ca795;
+  text-decoration: none;
+}
+
+.menu li a{
+  text-decoration:none;
+  color: black;
+}
+
+#druga{
+  margin-top: 40px;
+}
+
+#treca{
+  margin-top: 30px;
+}
+
+.ucenik button:hover{
+  transition: transform .3s ease;
+  transform: scale(1,3);
+}
+.profesor button:hover{
+  transition: transform .3s ease;
+  transform: scale(1.3);
+}
+.profesor{
+  padding-top: 10%;
+  padding-left: 30px;
+  padding-right: 100px;
+  padding-bottom: 30px;
+}
+
+.ucenik{
+  padding-top: 10%;
+  padding-left: 30px;
+  padding-right: 100px;
+  padding-bottom: 30px;
+}
+
+/*Druga sekcija */
+.lijeva{
+  margin-left: 8%;
+}
+
+#druga h1{
+  text-align: center;
+}
+
+.sredina{
+  padding-top: 100px;
+  text-align: center;
+}
+
+.predmeti{
+  margin-top: 5%;
+}
+
+.predmeti img:hover{
+  transition: transform .3s ease;
+  transform: scale(1.3);
+}
+
+.predmeti figcaption{
+  padding-left: 20px;
+  padding-top:10%;
+  color: #6e8881;
+  font-size:20px;
+  font-family: Garamond, Candra;
+}
+
+.sredina p.srednji{
+  font-size: 40px;
+  font-family: Garamond, 'Dekko', 'Times New Roman'; font-weight: bolder; color: #3f2f2f ;
+  text-transform: uppercase;
+}
+.sredina p.srednji2{
+  font-size: 20px;
+  font-family: sans-serif; 
+  font-style: italic; color: #5ca795;
+}
+
+.sredina p.srednji:hover{
+  transition: transform .5s ease;
+  transform: scale(1.2);
+}
+
+.desna{
+  margin-right: 6%;
+}
+
+
+/*Treca sekcija */
+
+#treca{
+  margin-top: 0%;
+  padding-top: 0%;
+  }
+
+.sekcija{
+  margin: 0%;
+}
+
+.volonteri {
+  position: absolute;
+  top: 0%;
+  margin-top: 0%;
+  margin-left: 0%;
+  font-family: Garamond,'Dekko','Times New Roman', Times, serif;
+}
+
+.lboard_section{
+  margin: 10px;
+  margin-top: 15px;
+  position: absolute;
+  top: 10 px;
+	height: 450px;
+	background: #f94f62;
+  padding-right: 50px;
+	position: absolute;
+  left: -150px;
+	border-radius: 5px;
+  float: right;
+  
+}
+
+.lboard_section .lboard_tabs ul{
+	display: flex;
+}
+
+.lboard_section .lboard_tabs ul li{
+	margin-right: 50px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #3a3d51;
+	cursor: pointer;
+}
+
+.lboard_section .lboard_tabs ul li:hover,
+.lboard_section .lboard_tabs ul li.active{
+	color: #fff;
+}
+
+.lboard_wrap{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	background: #b3ddd1;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.lboard_wrap .lboard_item{
+	padding: 35px;
+}
+
+.lboard_wrap .lboard_mem{
+	display: flex;
+	align-items: center;
+  margin: 15px;
+	padding: 5px 0;
+	border-bottom: 1px solid #ffe773;
+}
+
+.lboard_wrap .lboard_mem:first-child{
+	padding-top: 0;
+}
+
+.lboard_wrap .lboard_mem:last-child{
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.lboard_wrap .lboard_mem .img{
+	width: 50px;
+  border-radius: 50%;
+}
+
+.lboard_wrap .lboard_mem img{
+	display: block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	width: 100%;
+  border-radius: 50%;
+}
+
+.lboard_wrap .lboard_mem .name_bar{
+	margin: 0 20px;
+	width: calc(100% - 150px);
+}
+
+.lboard_wrap .lboard_mem .name_bar p{
+	color: #3a3d51;
+  font-family: Garamond, 'Times New Roman';
+  font-size: 20px;
+}
+
+.lboard_wrap .lboard_mem .name_bar p span{
+	margin-right: 5px;
+  font-family: Garamond, 'Times New Roman';
+  font-size: 20px;
+}
+
+.lboard_wrap .lboard_mem .points{
+	width: 100px;
+	color: #3a3d51;
+}
+
+.lboard_wrap .lboard_mem .name_bar .bar_wrap{
+	width: 100%;
+	height: 5px;
+	background: #d5b000;
+	margin-top: 5px;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.lboard_wrap .lboard_mem .name_bar .bar_wrap .inner_bar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	background: #fff;
+	border-radius: 5px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+
+
+/*Cetvrta sekcija */
+.card-group{
+  margin: 5%;
+  border: 0px;
+}
+
+.card{
+  height: 350px;
+  width: 300px;
+  position: relative;
+  margin: 60px; /* Center it */
+  border: 0px;
+  margin-top: 0px;
+}
+
+.card .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: #fff; /* Fallback color */
+  background: #f94f62; /* Black background with 0.5 opacity */
+  color: #fff; /* Grey text */
+  width: 100%; /* Full width */
+  border: 0;
+  font-family: 'Dekko',Garamond, 'Times New Roman';
+  padding: 20px;
+}
+
+.card .content h1:hover{
+transition: transform .3s ease;
+  transform: scale(1.1);
+}
+
+.social{
+  padding-left: 10px;
+}
+.social a{
+  float: right;
+  padding-left: 20px;
+}
+
+.social  img{
+  height: 50px;
+  width: 50px;
+}
+
+
+/*Peta sekcija*/
+.social{
+  align-items: center;
+  position: absolute;
+  right: 130px;
+  padding-left: 100px;
+  padding-top: 160px;
+}
+.social a{
+  float: right;
+  padding-left: 50px;
+
+}
+
+.social  img{
+  height: 60px;
+  width: 60px;
+}
+
+.social img:hover{
+    transition: .3s ease;
+    transform: scale(1.1);
+  }
+
+
+
+.info{
+  padding-left: 20%;
+  
+}
+
+.Informacije{
+  font-family: Garamond, 'Dekko', 'Times New Roman', Times, serif;
+  color: #3f2f2f;
+  font-size: 25px;
+  padding-left: 170px;
+  font-weight: bold;
+}
+
+.kontaktinfo{
+  font-family: Garamond, 'Dekko', 'Times New Roman', Times, serif;
+  color: #3f2f2f;
+  font-size: 15px;
+  padding-left: 170px;
+}
+
+.Informacije li:hover{
+  transition: .3s ease;
+  transform: scale(1.1);
+}
+
+
+.podnozje{
+  padding-top: 80px;
+  margin: 20px;
+  height: 50px;
+ position: absolute;
+ bottom: 0;
+  color: #f94f62;
+  font-size: 10px;
+  text-align: center;
+  font-family: Garamond, 'Dekko','Times New Roman', Times, serif;
+}
+
+
+/*PREDMETI*/
+
+.izbor_predmeta{
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.izbor_predmeta img:hover{
+  transition: transform .3s ease;
+  transform: scale(1.3);
+}
+
+.bcp{
+  margin-bottom: 3%;
+}
+
+
+.item figcaption{
+  padding-top: 30px;
+  padding-left:10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/*INFORMATIKA*/
+
+
+.mnpredavac,.mnoblast,.mnvideo{
+  margin-left: 18%;
+  font-size: 25pt;
+  font-weight: bold;
+}
+
+.predavac,.oblast,.video{
+  margin-left: 10%;
+  
+}
+
+.predavac,.oblast{
+  margin-top: 5%;
+  color: #3f2f2f;
+  font-size: 22pt;
+  font-family: Garamond, 'Dekko','Times New Roman', Times, serif;
+}
+
+.predavac {
+  list-style: square ;
+}
+
+
+.video{
+  float: right;
+  margin-right: 13%;
+}
+
+/*POPUP FORMAAAAAA*/
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* Skrivanje popup forme */
+.form-popup {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: -360px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Stilovi oko containera */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Sirina inputa */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Kada su inputi u fokusu, ucini nesto */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Stilovi login,cancel tipki */
+.form-container .btn {
+  background-color: #5ca795;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Dodavanje crvene pozadine na cancel tipku */
+.form-container .cancel {
+  background-color: #f94f62;
+}
+
+/* Hover efekti */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}     
+/*KRAJ POPUP FORMEEE*/
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  } 
+ .html{
+      margin: 0px;
+      padding: 0px;
+      }
+  .naziv{
+      width: 20px;
+      height: 20px;
+  }
+  .body{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 10pt;
+      margin: 0px;
+      padding: 0px;
+      display: block;
+  }
+ 
+ .header{
+      padding: 0px;
+      background-color: rgb(230, 223, 22341);
+      color: black;
+  }
+  .menu ul{
+      list-style-type: none;
+      margin: 0px;
+      font-style: bold;
+      padding-top: 20px;
+      padding-left: 150px;
+  }
+  a{
+      text-decoration: none;
+      display: block;
+      color: black;
+  }
+  a:hover{
+      display: block;
+      color: white;
+  }
+  .menu li{
+      display: block;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 15pt;
+      border-bottom: black; 
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      float: left;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.12), 0 5px 10px rgba(0,0,0,0.24);
+  }
+  .srednji{
+      text-align: center;
+      padding-left: 100px;
+  }
+  .slike{
+      padding-left: 170px;
+  }
+  .menu li:hover{
+      display: block;
+      background-color: #5ca795;
+  }
+  .footer{
+    background-color: rgb(230, 223, 22341);
+    color: black;
+  }
+}

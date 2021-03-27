@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFun</title>
+    <script src="slider.js"></script>
+    <link rel="stylesheet" href="slider.css">
+    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.min.js">
+
+    <style>
+      section > span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 7vw;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="slides">
+          <section id="prva">
+              <div class="row">
+              <div class="row header" style="width:  100%; height: 80px;">
+                  <div class="col-1 prazno">
+            
+                  </div>
+                  <div class="col-4 naziv" >
+                    <img src="EduFun.png" alt="..." height="50%">
+                  </div>
+                  <div class="col-7 menu">
+                    <ul>
+                      <li><a href="index.html">Početna</a></li>
+                      <li><a href="onama.html">O nama</a></li>
+                      <li>Kontakt</li>
+                    </ul>
+                  </div>
+                </div>
+
+              <div class="col-4 profesor">
+                <img src="slike\dodatno\prof.png" class="img-thumbnail" alt="..." style="width: 100%; border: 0;position: absolute; left: 15%; top: 20%;">
+                <button type="button" class="btn" style=" width: 65%; border: 0; position: absolute; left: 30%; top: 100%; background-color: #5ca795;color: #fff	;font-family: Garamond,Times New Roman,serif;">JA SAM PREDAVAČ</button>
+                <!--Popup Forma-->
+                <div class="form-popup" id="myForm">
+                  <form action="login.php" class="form-container">
+                    <h1>Login</h1>
+                
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email">
+                
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw">
+                
+                    <button type="submit" class="btn" onclick="window.open('predmeti.html')">Login</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                  </form>
+                </div>
+                <!--Kraj popupforme-->
+              </div>
+              <div class="col-4"><h1 style=" padding-top: 20%; font-size: 50px; color: #f94f62; font-family: 'Dekko', Garamond, 
+              'Times New Roman';text-align: center;">
+              Smijeh, zabava, uživanje....Da, sve se može naučiti na malo drugačiji, bolji način!</h1>
+              <h2 style=" padding-top: 10%;font-size:  50px; color: #3f2f2f; font-family: 'Dekko', Garamond, 
+              'Times New Roman';text-align: center;">Ekipa te čeka!</h2></div>
+
+              <div class="col-4 ucenik">
+              <img src="slike\dodatno\student.png" class="img-thumbnail" alt="..." style="width: 40%; position: absolute; left: 20%; top: 20%;border: 0;">
+                <button type="button" class="btn" onclick="openForm()" style=" width: 65%; position: absolute; left: 10%; top: 100%; border: 0; background-color: #f94f62;	color: #fff	;font-family: Garamond,Times New Roman,serif;">JA SAM UČENIK</button>
+              </div>
+            </div>
+        </section>
+        <section id="druga">
+          <!--<h1 style="color:  #3f2f2f;">Predmeti iz kojih nudimo instrukcije:</h1>-->
+        <div class="col-12 predmeti" align="center">
+          <div class="col-2 lijeva">
+            <table>
+            <tr>
+                <td></td>
+                <td><img src="slike\predmeti\bio.png" style="width: 100px; height: 100px;"><figcaption>Biologija</figcaption></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><img src="slike\predmeti\chem.png" style="width: 100px; height: 100px;"><figcaption>Hemija</figcaption></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><img src="slike\predmeti\phys.png" style="width: 100px; height: 100px;"><figcaption>Fizika</figcaption></td>
+              <td></td>
+          </tr>
+            </table>
+          </div>
+          <div class="col-6 sredina" align="center">
+            <p class="srednji" style="font-family: Garamond, Times New Roman;">Svaki predmet <br/>ima svoju zabavnu priču. <br/>
+              Nikoga ne izostavljamo!</p>
+            <p class="srednji2"><q>Nije znanje znanje znati, već je znanje znanje dati!</q>
+              <br/></p>
+          </div>
+          <div class="col-2 desna">
+            <table>
+              <tr>
+                  <td><img src="slike\predmeti\geo.png" style="width: 100px; height: 100px;"><figcaption>Geografija</figcaption></td>
+                  <td></td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td><img src="slike\predmeti\inf.png" style="width: 100px; height: 100px;"><figcaption>Informatika</figcaption></td>
+              </tr>
+              <tr>
+                <td><img src="slike\predmeti\math.png" style="width: 100px; height: 100px;"><figcaption>Matematika</figcaption></td>
+                <td></td>
+                <td></td>
+            </tr>
+              </table>
+          </div>
+        </div>
+        </section>
+
+        <section id="treca">
+       
+          <div class="sekcija">
+            <div class="col-5 volonteri" style="color:#5ca795 ; text-align: center; padding-left: 110px; padding-top: 70px; padding-right:20px; font-size: 25px;">
+              <p>Volonter ste i predavač? Komunikativni ste i kreativni? Pridružite se EduFun izazovima za najzabavnije edukativne sadržaje.<br/>
+                 Vi kreirate, učenici biraju, a mi nagrađujemo. Što se u EduFun nauči,
+                to se nikada i ne zaboravi!
+              </p>
+              <a href="#" style="font-family: Garamond, Times New Roman;">Saznaj više</a>
+            </div>
+
+          
+
+            <div class="col-5 lboard_section">
+              <div class="lboard_tabs">
+                <div class="tabs">
+                  <ul>
+                    <li data-li="today">Diamond</li>
+                    <li class="active" data-li="month">Gold</li>
+                    <li data-li="year">Ruby</li>
+                  </ul>
+                </div>
+              </div>
+      
+              <div class="lboard_wrap">
+                <div class="lboard_item today" style="display: none;">
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_1.png" alt="picture_1">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>1.</span> Asmir Hodžić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 95%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      195 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_2.png" alt="picture_2">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>2.</span>Sara Subašić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 80%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      185 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_3.png" alt="picture_3">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>3.</span>Lana Horvat</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 60%;"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      160 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_4.jpg" alt="picture_4">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>4.</span>Toni Šimić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 30%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      130 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_5.jpg" alt="picture_5">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>5.</span>Kanita Begić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 10%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      110 points
+                    </div>
+                  </div>
+                </div>
+
+                <div class="lboard_item month" style="display: block;">
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_2.png" alt="picture_2">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>1.</span> Sara Subašić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 95%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      1195 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_3.png" alt="picture_3">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>2.</span>Lana Horvat</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 80%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      1185 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_1.png" alt="picture_1">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>3.</span>Asmir Hodžić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 70%;"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      1160 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_5.jpg" alt="picture_5">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>4.</span>Kanita Begić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 50%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      1130 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_4.jpg" alt="picture_4">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>5.</span>Toni Šimić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 30%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      1110 points
+                    </div>
+                  </div>
+                </div>
+
+                <div class="lboard_item year" style="display: none;">
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_5.jpg" alt="picture_5">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>1.</span>Kanita Begić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 90%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      2195 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_4.jpg" alt="picture_4">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>2.</span>Toni Šimić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 85%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      2185 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_3.png" alt="picture_3">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>3.</span>Lana Horvat</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 65%;"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      2160 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_1.png" alt="picture_1">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>4.</span>Asmir Hodžić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 30%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      2130 points
+                    </div>
+                  </div>
+
+                  <div class="lboard_mem">
+                    <div class="img">
+                      <img src="slike\lb\pic_2.png" alt="picture_2">
+                    </div>
+                    <div class="name_bar">
+                      <p><span>5.</span>Sara Subašić</p>
+                      <div class="bar_wrap">
+                        <div class="inner_bar" style="width: 10%"></div>
+                      </div>
+                    </div>
+                    <div class="points">
+                      2110 points
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section id="cetvrta">
+          <div class="card-group">
+            <div class="card">
+             <!-- <img class="card-img-top" src="slike/dodatno/instrukcije.jpg" alt="Instrukcije">-->
+             <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/Xb7a1cwieArzas1FFb" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div><p><a href="https://giphy.com/gifs/poecast-poehlmann-fitness-adam-Xb7a1cwieArzas1FFb"></a></p>               
+            <div class="content">
+              <h1>Online</h1>
+              <p>Instrukcije nikad nisu bile slađe</p>
+            </div>
+            </div>
+
+
+            <div class="card">
+              <iframe width="100%" height="200px" src="https://www.youtube.com/embed/xJA4w2MlGoc" title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
+              <div class="content">
+                <h1>Video</h1>
+                <p>Glasaj za najzabavnijeg predavača</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/MUXoBBiCnqsJOeu4M8" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+              </div><p><a href="https://giphy.com/gifs/ucdavis-davis-aggies-uc-MUXoBBiCnqsJOeu4M8"></a></p>
+                <div class="content">
+                  <h1>Druženje</h1>
+                  <p>Sa hiljadama učenika širom BiH</p>
+                </div>
+            </div>
+            
+          </div>
+        </section>
+
+
+        <section id="peta"><span></span>
+          <div class="footer">
+            <div class="col-5 info">
+              <div class="Informacije">
+                <ul>
+                  <li>O nama</li>
+                  <li>Naša vizija i misija</li>
+                  <li>Forum instruktora</li>
+                  <li>Blog</li>
+                  <li>FAQ</li>
+                </ul>
+              </div>
+            <div class="kontaktinfo">
+              <ul>
+                <li>+387 99-999-999</li>
+                <li>Sarajevska, br. 1, Sarajevo</li>
+              </ul>
+            </div>
+          </div>
+            <div class="col-7 social">
+              <a href="https://www.facebook.com/"><img src="slike\social\fb.png"></a>
+              <a href="https://www.gmail.com"><img src="slike\social\gmail.png"></a>
+              <a href="https://www.linkedin.com"><img src="slike\social\linkedin.png"></a>
+              <a href="https://www.instagram.com"><img src="slike\social\inst.png"></a>
+            </div>
+        
+            <div class="col-12 podnozje"><h4>© 2021 eduFUN BiH. Sva prava su zadržana. </h4></div>
+        </div>
+    </section>
+    </section>
+      
+      <script>
+        var mySlider = slider('.slides');
+      </script>
+      <script src="js\scripts.js"></script>
+      <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'a907f47f-d7d9-4463-b0a3-507f60803b06', f: true }); done = true; } }; })();</script>
+      <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+      </script>
+    </div>
+  </body>
+</html>

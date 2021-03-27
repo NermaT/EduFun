@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page-slider-js</title>
+    <script src="slider.js"></script>
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.min.js">
+
+    <style>
+      section > span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 7vw;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper"></div>
+      <div class="slides">
+          <section id="prva">
+                <div class="row">
+                    <div class="row header" style="width:  100%; ">
+                        <div class="col-1 prazno">
+                    
+                        </div>
+                        <div class="col-4 naziv" >
+                            <h1 style="font-family: Candara, Times News Roman;">Edukacija za sve</h1>
+                        </div>
+                        <div class="col-7 menu">
+                            <ul>
+                                <a href="index.html" style="text-decoration: none; color: black;"><li>Početna</li></a>
+                                    <li>O nama</li>
+                                <a href="kontakt.html" style="text-decoration: none; color: black;"><li>Kontakt</li></a>
+                            </ul>
+                    </div>
+                </div>
+                <div class="col-12 kontakt" align="center">
+                    <h1 style="padding-bottom: 50px;">Komentar</h1>
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td><div class="forma">
+                                <fieldset>
+                                <table >
+                                <form method="post">
+                                <tr>
+                                    <td align="left" width="100px">Ime:</td>
+                                    <td><input type="text" name="ime" /></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" width="100px">Prezime:</td>
+                                    <td><input type="text" name="prezime" /></td>
+                                </tr>
+                                <tr>
+                                <td align="left" width="100 px">E-mail:</td>
+                                <td><input type="text" name="mail" /></td>
+                                </tr>
+                                <tr>
+                                <td align="left" width="100px">Naslov:</td>
+                                <td><input type="text" name="naslov" /></td>
+                                </tr>
+                                <tr>
+                                <td align="left" width="100 px">Komentar:</td>
+                                <td><textarea col="100" rows="7"></textarea></td> 
+                                </tr>  
+                                <tr>
+                                <td colspan="2" align="center"><input onclick="alert('Hvala na komentaru!');" id="hvala" type="submit" value="Pošalji" name="posaljiS" /></td>
+                                </tr> 
+                                </form>
+                                </table>
+                                </fieldset>
+                            </div></td>
+                            <td></td>
+                            <td>
+                                <div class="social">
+                                    <a href="https://www.facebook.com/"><img src="slike\social\fb.png"></a>
+                                    <a href="https://www.gmail.com"><img src="slike\social\gmail.png"></a>
+                                    <a href="https://www.linkedin.com"><img src="slike\social\linkedin.png"></a>
+                                    <a href="https://www.instagram.com"><img src="slike\social\inst.png"></a>
+                                </div>
+                            </td>
+                        </tr>
+                        </table>
+                    
+                    
+                  </div>
+                </div>
+            </section>
+      </div>
+      <script>
+        var mySlider = slider('.slides');
+      </script>
+      <script src="js\scripts.js"></script>
+      <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'a907f47f-d7d9-4463-b0a3-507f60803b06', f: true }); done = true; } }; })();</script>
+    </div>
+  </body>
+</html>
